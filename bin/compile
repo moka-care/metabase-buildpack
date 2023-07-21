@@ -5,7 +5,7 @@ set -eu
 METABASE_VERSION=`cat ./bin/version`
 METABASE_DIR="$1/target/uberjar"
 METABASE_JAR="$METABASE_DIR/metabase.jar"
-METABASE_URL="https://downloads.metabase.com/445472DA-A1B2-466E-BEEE-3B0E479A5279/v1.46.6.1-latest-patch/metabase.jar" #overriding for security patches
+METABASE_URL="https://downloads.metabase.com/entreprise/v$METABASE_VERSION/metabase.jar"
 
 mkdir -p $METABASE_DIR
 
