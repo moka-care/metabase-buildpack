@@ -12,7 +12,7 @@ mkdir -p $METABASE_DIR
 echo -n "-----> Downloading Metabase... from $METABASE_URL to $METABASE_JAR"
 curl -s --retry 3 -o $METABASE_JAR -L $METABASE_URL
 
-CSS=(styles embed main public)
+CSS=(styles embed)
 # uncomment below to test locally 
 # CSS=(styles embed main public)
 
