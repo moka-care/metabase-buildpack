@@ -11,4 +11,22 @@ mkdir -p $METABASE_DIR
 
 echo -n "-----> Downloading Metabase... from $METABASE_URL to $METABASE_JAR"
 curl -s --retry 3 -o $METABASE_JAR -L $METABASE_URL
+
+CSS=(styles embed)
+# uncomment below to test locally 
+# CSS=(styles embed main public)
+
+for css in ${CSS[@]}; do
+  echo "patching up $css.css"
+  # open up metabase
+  unzip $METABASE_JAR frontend_client/app/dist/app-$css.css
+
+  # add the override at the end of the file
+  cat override/override.css >> frontend_client/app/dist/app-$css.css
+
+  # stich up metabase
+  zip -u $METABASE_JAR frontend_client/app/dist/app-$css.css
+done
+
+
 echo "done"
