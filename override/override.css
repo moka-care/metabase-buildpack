@@ -1,7 +1,3 @@
 .Card {
   box-shadow: none !important;
 }
-
-[data-testid="embed-frame"] [data-testid="column-header"], [data-testid="embed-frame"] [data-testid="legend-caption"] {
-  display: none;
-}
