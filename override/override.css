@@ -2,6 +2,7 @@
   box-shadow: none !important;
 }
 
-[data-testid="embed-frame"] table [data-testid="column-header"], [data-testid="embed-frame"] div:has(> [data-testid="legend-caption"] [data-testid="legend-caption-title"]:empty) {
+[data-testid="embed-frame"] table [data-testid="column-header"], [data-testid="embed-frame"] div:has(> [data-testid="legend-caption"] [data-testid="legend-caption-title"]:empty), [data-testid="embed-frame"] div:has(> [data-testid="legend-caption"] [data-testid="legend-caption-title"]):has(+ div [data-testid="loading-spinner"]) {
   display: none;
 }
+
