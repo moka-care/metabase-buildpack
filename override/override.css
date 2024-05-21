@@ -1,3 +1,7 @@
 .Card {
   box-shadow: none !important;
 }
+
+[data-testid="embed-frame"] table [data-testid="column-header"], div:has(> [data-testid="legend-caption"] [data-testid="legend-caption-title"]:empty) {
+  display: none;
+}
